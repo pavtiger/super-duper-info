@@ -1,4 +1,4 @@
-from sklearn.preprocessing import StandardScaler
+import numpy
 
 def not_sum_only(*args, mode = 'sum'):
     if mode == 'sum':
@@ -20,13 +20,9 @@ def not_sum_only(*args, mode = 'sum'):
         return sum / len(args)
     
     elif mode == 'sdev':
-        pass
-        scaler = StandardScaler()
-        imgs_train = scaler.fit_transform(args)
-        return imds_train
+        return numpy.std(args)
     
     else:
         raise Exception('invalid mode')
     
-
 #print(not_sum_only(1, 2, 3, mode = 'sdev'))

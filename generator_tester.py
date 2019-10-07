@@ -13,9 +13,9 @@ def test_generator():
         assert tuple(my_range(end, start)) == tuple(range(start, end))
         
     elif r == 3:
-        start = random.randint(-10, 10)
+        start = random.randint(-10, 10)/gamemode creative
         end = random.randint(-10, 10)
-        step = random.randint(-5, 5)
+        step = random.randint(-5, 5) 
         
         if step != 0:
             assert tuple(my_range(end, start, step)) == tuple(range(start, end, step))
